@@ -1,0 +1,261 @@
+.ppanel-wrap {
+  width: 100%;
+  text-align: center;
+}
+
+.ppanel-row {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 36px 34px;
+  margin-bottom: 28px;
+}
+
+.ppanel-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 230px;
+  max-width: 250px;
+}
+
+.ppanel-title {
+  font-weight: bold;
+  font-size: 1.35rem;
+  font-family: serif;
+  color: #222;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.ppanel-box {
+  border: 2px solid #0555d1;
+  border-radius: 11px;
+  padding: 17px 16px 10px 16px;
+  min-width: 180px;
+  min-height: 72px;
+  margin-bottom: 12px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ppanel-box-label {
+  font-weight: 500;
+  font-size: 1.08em;
+  color: #222;
+  margin-bottom: 4px;
+  margin-top: 6px;
+}
+
+
+.ppanel-blue-btn {
+  background: #0555d1;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 8px 26px;
+  margin-bottom: 3px;
+  margin-top: 2px;
+  width: 100%;
+  cursor: pointer;
+  transition: background 0.16s;
+}
+
+.ppanel-blue-btn:hover {
+  background: #0646a1;
+}
+
+
+.ppanel-green-btn {
+  background: #0aa651;
+  color: #fff;
+  border: none;
+  border-radius: 24px;
+  font-weight: 700;
+  padding: 7px 35px 6px 35px;
+  width: 90%;
+  max-width: 220px;
+  margin-top: 7px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: background 0.14s;
+}
+
+.ppanel-green-btn:hover {
+  background: #097c3d;
+}
+
+
+.ppanel-radio-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+
+  width: 110%;
+}
+.ppanel-radio-label {
+  font-weight: 600;
+  font-size: 1.1em;
+  color: #222;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  margin-bottom: 0px;
+  cursor: pointer;
+  position: relative;
+}
+
+.ppanel-radio-label input[type="radio"] {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  border: 2px solid #bbb;
+  border-radius: 50%;
+  outline: none;
+  background: #fff;
+  position: relative;
+  cursor: pointer;
+}
+
+.ppanel-radio-label input[type="radio"]:checked {
+  border: 2px solid #0555d1;
+}
+.ppanel-radio-label .ppanel-radio-custom {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  margin-left: -25px;
+  margin-right: 6px;
+}
+
+.ppanel-radio-label input[type="radio"]:checked + .ppanel-radio-custom::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 5px;
+  left: 3px;
+  width: 10px;
+  height: 10px;
+  background: #0555d1;
+  border-radius: 50%;
+}
+
+
+.ppanel-radio-label input[type="radio"]:checked ~ span {
+  color: #0555d1;
+  font-weight: 700;
+}
+
+
+.ppanel-quiz-btn {
+  background: #0555d1;
+  color: #fff;
+  border: none;
+  border-radius: 22px;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 8px 44px;
+  margin: 26px auto 0 auto;
+  display: block;
+  cursor: pointer;
+}
+.ppanel-quiz-btn:hover {
+  background: #0646a1;
+}
+.ppanel-quiz-msg {
+  font-weight: 700;
+  font-size: 2rem;
+  color: #222;
+  font-family: serif;
+  text-align: center;
+  margin-top: 16px;
+}
+
+
+@media (max-width: 1020px) {
+  .ppanel-row {
+    gap: 20px 12px;
+  }
+  .ppanel-col {
+    min-width: 160px;
+    max-width: 99vw;
+  }
+}
+
+@media (max-width: 900px) {
+  .ppanel-row {
+    flex-wrap: wrap;
+  }
+  .ppanel-col {
+    min-width: 280px;
+    max-width: 360px;
+  }
+  .ppanel-box {
+    min-width: 120px;
+    padding: 11px 4vw 8px 4vw;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .ppanel-row {
+    gap: 17px 0px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .ppanel-col {
+    width: 95vw;
+    min-width: 0;
+    max-width: 410px;
+    margin-bottom: 12px;
+  }
+  .ppanel-title {
+    font-size: 1.10rem;
+  }
+  .ppanel-box {
+    width: 100%;
+    min-width: 0;
+    max-width: none;
+    padding: 10px 6vw 6px 6vw;
+  }
+  .ppanel-green-btn, .ppanel-blue-btn {
+    font-size: 1.07rem;
+    width: 100%;
+    max-width: 99vw;
+    padding: 10px 0;
+  }
+  .ppanel-quiz-btn {
+    font-size: 1.1rem;
+    padding: 8px 5vw;
+    margin-top: 19px;
+  }
+  .ppanel-quiz-msg {
+    font-size: 1.2rem;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 410px) {
+  .ppanel-col,
+  .ppanel-box {
+    font-size: 0.98rem;
+    max-width: 99vw;
+    min-width: 0;
+  }
+  .ppanel-title,
+  .ppanel-quiz-msg {
+    font-size: 1rem;
+  }
+  .ppanel-green-btn,
+  .ppanel-blue-btn {
+    font-size: 0.98rem;
+  }
+}

@@ -1,0 +1,169 @@
+.contact-section {
+  background-color: #f4f8fc;
+  padding: 40px 0;
+}
+
+.contact-title {
+  text-align: center;
+  color: #0066cc;
+  font-weight: bold;
+}
+
+.contact-subtitle {
+  text-align: start;
+  max-width: 700px;
+  margin: 10px auto 30px;
+  font-size: 16px;
+  color: #555;
+}
+
+.contact-card {
+  background: white;
+  border-radius: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 30px;
+}
+
+.contact-left {
+  flex: 1;
+  padding: 20px;
+  border-right: 1px solid #ddd;
+}
+
+.contact-right {
+  flex: 1;
+  padding: 20px;
+}
+
+/* title  */
+
+.office-title {
+  color: #0066cc;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.form-title {
+  font-size: 18px;
+  color: #0066cc;
+  font-weight: bold;
+}
+
+/* para  */
+
+.office p {
+  margin: 5px 0;
+  color: #333;
+  font-size: 16px;
+}
+
+.form-subtitle {
+  font-size: 16px;
+}
+
+/* .....  */
+
+.icon {
+  color: #ff9933;
+  margin-right: 8px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 13px;
+}
+
+.contact-form textarea {
+  resize: none;
+  height: 80px;
+}
+
+.send-btn {
+  background-color: #0066cc;
+  color: white;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+  /* width: 20px; */
+}
+
+.social-icons img {
+  width: 30px;
+  height: 30px;
+  margin: 0 8px;
+}
+
+/* .social-icons  {
+  margin: 0 8px;
+  font-size: 20px;
+  color: #000;
+} */
+
+.info-row {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  margin-bottom: 12px; /* More breathing room */
+  flex-wrap: wrap; /* Items will wrap if not enough space */
+  gap: 6px; /* Consistent gap */
+}
+
+.info-icon {
+  width: 22px;
+  height: 22px;
+  margin-right: 7px;
+  flex-shrink: 0; /* Icons don't shrink */
+}
+
+.info-label {
+  font-weight: bold;
+  margin-right: 5px;
+  white-space: nowrap;
+}
+
+.info-link,
+.info-text {
+  margin-left: 4px;
+  word-break: break-all; /* Handle overflow text on small screens */
+}
+
+/* Responsive adjustments for small screens */
+@media (max-width: 480px) {
+  .info-row {
+    font-size: 15px;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+    gap: 4px;
+  }
+
+  .info-icon {
+    width: 19px;
+    height: 19px;
+    margin-right: 5px;
+  }
+
+  .info-label {
+    margin-right: 3px;
+  }
+
+  .info-link,
+  .info-text {
+    font-size: 15px;
+    margin-left: 2px;
+  }
+}

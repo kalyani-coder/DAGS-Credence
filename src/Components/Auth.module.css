@@ -1,0 +1,38 @@
+/* Auth.module.css */
+.container {
+  max-width: 400px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: #fff; 
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.input {
+  width: 100%;
+  padding: 10px;
+  margin: 0.5rem 0 1rem 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+
+.button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.toggleText {
+  margin-top: 1rem;
+  cursor: pointer;
+  color: #007bff;
+  user-select: none;
+}

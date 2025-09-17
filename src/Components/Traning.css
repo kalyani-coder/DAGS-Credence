@@ -1,0 +1,15 @@
+.card-title {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.btn-outline-info {
+  color: #31BCAD;
+  border-color: #31BCAD;
+  text-decoration: none;
+}
+
+.btn-outline-info:hover {
+  background-color: #31BCAD;
+  color: #fff;
+}
