@@ -1,0 +1,79 @@
+.about-section-container {
+  /* max-width: 900px; */
+  margin: 1.5rem auto 3rem auto;
+  padding: 0 1rem;
+  font-family: Arial, sans-serif;
+  color: #222;
+  line-height: 1.6;
+}
+
+.about-section-container .our {
+  background-color: #0066cc;
+  border: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1.3rem;
+  padding: 0.5rem 2.2rem;
+  margin-bottom: 1rem;
+  border-radius: 30px;
+  cursor: default;
+  user-select: none;
+  display: inline-block;
+  letter-spacing: 0.03em;
+  transition: background-color 0.3s ease;
+}
+
+.about-section-container .our:hover {
+  background-color: #ff8b00;
+}
+
+.about-section-container .about-paragraph {
+  font-size: 16px;
+  margin-bottom: 2rem;
+}
+
+.about-section-container .them {
+  display: block;
+  margin-top: 0.7rem;
+  color: #444;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.about-section-container .about-paragraph ul {
+  list-style-type: disc;
+  padding-left: 1.4rem;
+  margin: 0.8rem 0 2rem 0;
+}
+
+.about-section-container .about-paragraph ul li {
+  margin-bottom: 0.7rem;
+  font-weight: 500;
+  font-size: 1rem;
+  color: #222;
+}
+
+@media (max-width: 600px) {
+  .about-section-container {
+    padding: 0 12px;
+  }
+
+  .about-section-container .our {
+    font-size: 1.1rem;
+    padding: 0.45rem 1.8rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .about-section-container .about-paragraph {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .about-section-container .them {
+    font-size: 0.95rem;
+  }
+
+  .about-section-container .about-paragraph ul li {
+    font-size: 0.95rem;
+  }
+}
