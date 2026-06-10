@@ -9,8 +9,7 @@ import seventh from "../assets/IT/icseven.png";
 import eighth from "../assets/IT/iceight.png";
 import ninth from "../assets/IT/icnine.png";
 import tenth from "../assets/IT/icten.png";
-import mutual from '../assets/PNG/It Services.png';
-import "./services.css";
+import "./Services.css";
 import { useNavigate } from "react-router-dom";
 
 export default function ITServices() {
@@ -132,9 +131,9 @@ const servicesSections = [
 
       <div className="services-container-main">
              <div className="row p-5">
-               <div className="col-md-6 d-flex justify-content-center align-items-center">
+               {/* <div className="col-md-6 d-flex justify-content-center align-items-center">
                  <img src={mutual} alt="Mutual Fund Features" className="services-img-feature img-fluid" />
-               </div>
+               </div> */}
                <div className="col-md-6 my-2">
                  <button className="services-btncta my-2 ano" aria-expanded="false" aria-controls="services-value-content">
                    Our Priorities
