@@ -177,4 +177,10 @@ html, body {
 
 #about{
   margin-top: 70px;
+}
+
+.about-illustration {
+  max-height: 360px;
+  width: 100%;
+  object-fit: contain;
 } 

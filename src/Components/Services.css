@@ -106,6 +106,15 @@ body {
   background: #d4881e !important;
 }
 
+.services-btncta:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.services-btncta:disabled:hover {
+  background-color: #f6a623 !important;
+}
+
 /* Accordion styles */
 .services-acc-header {
   /* font-size: 20px; */

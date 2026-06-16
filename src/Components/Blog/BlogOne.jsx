@@ -82,7 +82,7 @@ const [openSection, setOpenSection] = useState(null);
               </div>
               <h5 className="services-cardtitle">Cloud Internship</h5>
               <p className="services-carddesc">Learn cloud platforms, services, and deployment models with hands-on projects.</p>
-              <button className="services-btncta" onClick={() => navigate("/blogs/cloud-internship")}>Read More</button>
+              <button className="services-btncta" disabled onClick={() => navigate("/blogs/cloud-internship")}>Read More</button>
             </div>
 
             <div className="services-card">
@@ -91,7 +91,7 @@ const [openSection, setOpenSection] = useState(null);
               </div>
               <h5 className="services-cardtitle">AI/ML Internship</h5>
               <p className="services-carddesc">Explore Artificial Intelligence & Machine Learning with real-world applications.</p>
-              <button className="services-btncta" onClick={() => navigate("/blogs/ml-internship")}>Read More</button>
+              <button className="services-btncta" disabled onClick={() => navigate("/blogs/ml-internship")}>Read More</button>
             </div>
 
             <div className="services-card">
@@ -100,7 +100,7 @@ const [openSection, setOpenSection] = useState(null);
               </div>
               <h5 className="services-cardtitle">Python Internship</h5>
               <p className="services-carddesc">Master Python programming for automation, data analysis, and development.</p>
-              <button className="services-btncta" onClick={() => navigate("/blogs/python-internship")}>Read More</button>
+              <button className="services-btncta" disabled onClick={() => navigate("/blogs/python-internship")}>Read More</button>
             </div>
 
             <div className="services-card">
@@ -109,7 +109,7 @@ const [openSection, setOpenSection] = useState(null);
               </div>
               <h5 className="services-cardtitle">GenAI & Prompt Engineering</h5>
               <p className="services-carddesc">Harness Generative AI tools and craft effective prompts for better results.</p>
-              <button className="services-btncta">Read More</button>
+              <button className="services-btncta" disabled>Read More</button>
             </div>
 
             <div className="services-card">
@@ -118,7 +118,7 @@ const [openSection, setOpenSection] = useState(null);
               </div>
               <h5 className="services-cardtitle">Mainframe & Cobol Internship</h5>
               <p className="services-carddesc">Learn legacy systems and COBOL programming used in large-scale enterprises.</p>
-              <button className="services-btncta" onClick={() => navigate("#")}>Read More</button>
+              <button className="services-btncta" disabled onClick={() => navigate("#")}>Read More</button>
             </div>
 
             <div className="services-card">
@@ -127,7 +127,7 @@ const [openSection, setOpenSection] = useState(null);
               </div>
               <h5 className="services-cardtitle">Introduction to Investing</h5>
               <p className="services-carddesc">Understand the basics of financial markets and how investing works.</p>
-              <button className="services-btncta" onClick={() => navigate("#")}>Read More</button>
+              <button className="services-btncta" disabled onClick={() => navigate("#")}>Read More</button>
             </div>
 
             <div className="services-card">
@@ -136,7 +136,7 @@ const [openSection, setOpenSection] = useState(null);
               </div>
               <h5 className="services-cardtitle">Stock Market Basics</h5>
               <p className="services-carddesc">Learn stock trading fundamentals, market terms, and how exchanges operate.</p>
-              <button className="services-btncta" onClick={() => navigate("#")}>Read More</button>
+              <button className="services-btncta" disabled onClick={() => navigate("#")}>Read More</button>
             </div>
 
             <div className="services-card">
@@ -145,7 +145,7 @@ const [openSection, setOpenSection] = useState(null);
               </div>
               <h5 className="services-cardtitle">Mutual Funds & ETF’s</h5>
               <p className="services-carddesc">Discover how mutual funds and ETFs work for wealth building.</p>
-              <button className="services-btncta" onClick={() => navigate("#")}>Read More</button>
+              <button className="services-btncta" disabled onClick={() => navigate("#")}>Read More</button>
             </div>
 
             <div className="services-card">
@@ -154,7 +154,7 @@ const [openSection, setOpenSection] = useState(null);
               </div>
               <h5 className="services-cardtitle">Types of Investment Options</h5>
               <p className="services-carddesc">Explore different investment choices like equity, bonds, and real estate.</p>
-              <button className="services-btncta" onClick={() => navigate("#")}>Read More</button>
+              <button className="services-btncta" disabled onClick={() => navigate("#")}>Read More</button>
             </div>
 
             <div className="services-card">
@@ -163,7 +163,7 @@ const [openSection, setOpenSection] = useState(null);
               </div>
               <h5 className="services-cardtitle">Inflation, Compounding & TVM</h5>
               <p className="services-carddesc">Understand money value, inflation impact, and compounding benefits.</p>
-              <button className="services-btncta" onClick={() => navigate("#")}>Read More</button>
+              <button className="services-btncta" disabled onClick={() => navigate("#")}>Read More</button>
             </div>
 
           </div>

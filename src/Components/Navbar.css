@@ -8,9 +8,18 @@
   z-index: 1030;
 }
 
-.navbar-brand img {
-  max-height: 44px;
-  width: auto;
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  margin-right: 1rem;
+  padding: 0;
+}
+
+.navbar-logo {
+  height: 48px;
+  width: 48px;
+  object-fit: contain;
+  display: block;
 }
 
 /* ==============================

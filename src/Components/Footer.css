@@ -6,9 +6,10 @@
 }
 
 .footer-logo {
-  max-width: 210px;
-  width: 100%;
-  height: auto;
+  width: 56px;
+  height: 56px;
+  max-width: 100%;
+  object-fit: contain;
 }
 
 .footer-socials {
@@ -74,7 +75,8 @@
 /* Responsive tweaks */
 @media (max-width: 767px) {
   .footer-logo {
-    max-width: 185px;
+    width: 56px;
+    height: 56px;
     margin: 0 auto;
   }
 /* 
@@ -98,6 +100,7 @@
 
 @media (max-width: 400px) {
   .footer-logo {
-    max-width: 85vw;
+    width: 48px;
+    height: 48px;
   }
 }

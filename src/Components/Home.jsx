@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./Home.css";
-import learn from "../assets/PNG/LEARNING &.png";
+import learn from "../assets/PNG/LEARNING-CERTIFICATION.png";
 import mutual from "../assets/PNG/MUTUAL.png";
 import IT from "../assets/PNG/IT Services.png";
 import Services from "./Service";

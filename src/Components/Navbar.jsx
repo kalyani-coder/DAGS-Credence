@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { NavLink, useNavigate, useLocation } from "react-router-dom";
-import logo from "../assets/logo.png";
+import logo from "../assets/company-logo.png";
 import "./Navbar.css";
 import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../features/authSlice";
@@ -53,8 +53,12 @@ export default function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg main-nav fixed-top">
       <div className="container navbar-container" ref={menuRef}>
-        <NavLink className="navbar-brand fw-bold" to="/" onClick={() => setShowNav(false)}>
-          <img src={logo} alt="Credence" width={180} height={44} className="img-fluid me-2" />
+        <NavLink className="navbar-brand" to="/" onClick={() => setShowNav(false)}>
+          <img
+            src={logo}
+            alt="Credence Investments and Technology Services"
+            className="navbar-logo"
+          />
         </NavLink>
         <button className="navbar-toggler" type="button" aria-label="Toggle navigation" onClick={toggleNav}>
           <span className="navbar-toggler-icon"></span>
@@ -242,8 +246,8 @@ export default function Navbar() {
               </>
             ) : (
               <div className="auth-buttons d-flex align-items-center">
-                <button className="btn btn-primary me-3 px-4" onClick={() => navigate("/login")}>Login</button>
-                <button className="btn navsignup" onClick={() => navigate("/signup")}>Sign Up</button>
+                <button className="btn btn-primary me-3 px-4" disabled>Login</button>
+                <button className="btn navsignup" disabled>Sign Up</button>
               </div>
             )}
           </div>

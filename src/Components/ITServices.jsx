@@ -9,7 +9,7 @@ import seventh from "../assets/IT/icseven.png";
 import eighth from "../assets/IT/iceight.png";
 import ninth from "../assets/IT/icnine.png";
 import tenth from "../assets/IT/icten.png";
-import mutual from '../assets/PNG/It Services.png';
+import mutual from "../assets/PNG/IT Services.png";
 import "./services.css";
 import { useNavigate } from "react-router-dom";
 
@@ -117,7 +117,7 @@ const servicesSections = [
                 </div>
                 <h5 className="services-cardtitle">{title}</h5>
                 <p className="services-carddesc">{desc}</p>
-                <button className="services-btncta">
+                <button className="services-btncta" disabled>
                   Read More
                 </button>
               </div>

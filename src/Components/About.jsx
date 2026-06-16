@@ -1,5 +1,5 @@
 import React from "react";
-import about from "../assets/PNG/ABOUT US.png";
+import about from "../assets/about-logo.png";
 import { FaUsers, FaBullseye, FaRocket } from "react-icons/fa";
 import AboutS from "./AboutS";
 import "../App.css";
@@ -28,8 +28,12 @@ technology solutions to achieve Digital Transformation.
                       </p>
         </div>
 
-       <div className="col-lg-5 d-flex justify-content-center">
-          <img src={about} alt="About Credence" className="img-fluid rounded" style={{maxHeight: '340px'}}/>
+       <div className="col-lg-5 d-flex justify-content-center align-items-center">
+          <img
+            src={about}
+            alt="Team collaboration and business growth"
+            className="img-fluid about-illustration"
+          />
         </div>
 
       </div>

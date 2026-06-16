@@ -1,6 +1,6 @@
 import React from "react";
 import { MdLocationOn, MdEmail, MdCall } from "react-icons/md";
-import logo from "../assets/logo.png";
+import logo from "../assets/company-logo.png";
 import fb from "../assets/fb.png";
 import insta from "../assets/insta.png";
 import twi from "../assets/twi.png";
@@ -18,7 +18,11 @@ export default function Footer() {
         <div className="row g-4">
           {/* Logo and Socials */}
           <div className="col-12 col-md-6 col-lg-3 text-center text-md-start">
-            <img src={logo} alt="Logo" className="footer-logo mb-3" />
+            <img
+              src={logo}
+              alt="Credence Investments and Technology Services"
+              className="footer-logo mb-3"
+            />
 
             <div className="footer-socials mt-3">
               <img src={fb} alt="Facebook" className="footer-social" />
