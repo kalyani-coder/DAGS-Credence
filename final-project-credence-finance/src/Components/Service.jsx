@@ -8,7 +8,7 @@ import sixth from "../assets/PNG/6th Icon.png";
 import seven from '../assets/PNG/7 th icon.png';
 import eighth from "../assets/PNG/8th Icon.png";
 import mutual from '../assets/PNG/MUTURAL FUNDS.png';
-import "./services.css";
+import "./Service.css";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 
