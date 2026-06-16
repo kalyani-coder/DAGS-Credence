@@ -1,0 +1,167 @@
+.mutualcard-two-container {
+  /* background: #f4f7fa; */
+  padding: 24px 12px 40px 12px;
+  min-height: auto;
+  max-width: 700px;
+  margin: 30px auto;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  border-radius: 16px;
+  /* box-shadow: 0 4px 12px rgba(0,0,0,0.08);s */
+}
+
+.mutualcard-two-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 24px;
+}
+
+.mutualcard-two-btn-row {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.mutualcard-two-add-btn,
+.mutualcard-two-remove-btn {
+  padding: 10px 30px;
+  font-size: 14px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  min-width: 110px;
+  font-weight: 700;
+  transition: background-color 0.3s ease;
+}
+
+.mutualcard-two-add-btn {
+  background: #1161e6;
+  color: #fff;
+}
+
+.mutualcard-two-add-btn:hover {
+  background: #0948b1;
+}
+
+.mutualcard-two-remove-btn {
+  background: #e42a19;
+  color: #fff;
+}
+
+.mutualcard-two-remove-btn:hover {
+  background: #a02115;
+}
+
+.mutualcard-two-input-card {
+  margin: 16px auto 0 auto;
+  border-radius: 16px;
+  background: #fff;
+  width: 90%;
+  max-width: 700px;
+  box-shadow: 4px 6px 8px rgba(200, 215, 224, 0.18);
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.mutualcard-two-input {
+  border: none;
+  outline: none;
+  background: none;
+  padding: 14px 18px;
+  width: 100%;
+  font-size: 20px;
+  font-weight: 700;
+  color: #999;
+}
+
+.mutualcard-two-input::placeholder {
+  color: #999;
+  opacity: 1;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.mutualcard-two-limit-msg {
+  margin: 20px auto 14px auto;
+  color: #ef3124;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.mutualcard-two-compare-btn {
+  padding: 12px 48px;
+  border: none;
+  border-radius: 24px;
+  background: #09b86d;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 0 auto;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.mutualcard-two-compare-btn:hover {
+  background: #07884f;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .mutualcard-two-title {
+    font-size: 16px;
+    margin-bottom: 18px;
+  }
+  .mutualcard-two-btn-row {
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+  }
+  .mutualcard-two-add-btn,
+  .mutualcard-two-remove-btn {
+    font-size: 14px;
+    padding: 12px 25px;
+    width: 100%;
+    max-width: 280px;
+    min-width: unset;
+  }
+  .mutualcard-two-input-card {
+    width: 96%;
+  }
+  .mutualcard-two-input,
+  .mutualcard-two-input::placeholder {
+    font-size: 16px;
+    padding: 12px 16px;
+  }
+  .mutualcard-two-compare-btn {
+    width: 100%;
+    max-width: 280px;
+    font-size: 16px;
+    padding: 14px 12px;
+  }
+}
+
+@media (max-width: 400px) {
+  .mutualcard-two-title {
+    font-size: 14px;
+  }
+  .mutualcard-two-add-btn,
+  .mutualcard-two-remove-btn {
+    font-size: 13px;
+    padding: 10px 15px;
+  }
+  .mutualcard-two-input,
+  .mutualcard-two-input::placeholder {
+    font-size: 14px;
+    padding: 10px 12px;
+  }
+  .mutualcard-two-compare-btn {
+    font-size: 14px;
+    padding: 10px 10px;
+  }
+}

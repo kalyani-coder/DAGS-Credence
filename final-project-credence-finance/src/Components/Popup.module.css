@@ -1,0 +1,78 @@
+.popupContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.popupCard {
+  display: flex;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  max-width: 600px;
+  width: 100%;
+}
+
+.popupLeft {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f4f4f4;
+  padding: 20px;
+}
+
+.popupImg {
+  max-width: 150px;
+  height: auto;
+}
+
+.popupRight {
+  position: relative;
+  padding: 20px;
+  flex: 1;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+
+@media (max-width: 600px) {
+  .popupCard {
+    flex-direction: column; /* Stack vertically on small screens */
+    max-width: 90%;         /* Slight padding from edges */
+  }
+
+  .popupLeft {
+    justify-content: center;
+    padding: 10px;
+  }
+
+  .popupImg {
+    max-width: 100px;
+    height: auto;
+  }
+
+  .popupRight {
+    padding: 15px;
+  }
+
+  .closeBtn {
+    top: 5px;
+    right: 5px;
+    font-size: 18px;
+  }
+}
