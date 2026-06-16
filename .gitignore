@@ -1,0 +1,17 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Environment
+.env
+.env.*
+
+# OS / editor junk
+.DS_Store
+__MACOSX/
+*.log
+
+# Vite cache
+.vite/
