@@ -118,7 +118,7 @@ const servicesSections = [
                 <h5 className="services-cardtitle">{title}</h5>
                 <p className="services-carddesc">{desc}</p>
                 <button className="services-btncta" disabled>
-                  Read More
+                  Coming Soon
                 </button>
               </div>
             ))}

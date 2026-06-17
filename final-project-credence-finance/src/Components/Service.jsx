@@ -150,7 +150,7 @@ export default function Services() {
                 </div>
                 <h5 className="services-cardtitle">Portfolio Overlap report</h5>
                 <p className="services-carddesc">Detailed MF-Portfolio Overlap Report (Compare up to 10 Funds)</p>
-                <button className="services-btncta" disabled>Read More</button>
+                <button className="services-btncta" disabled>Coming Soon</button>
               </div>
               {/* <div className="services-card">
                 <div className="services-cardicon-wrap">
@@ -158,7 +158,7 @@ export default function Services() {
                 </div>
                 <h5 className="services-cardtitle">Portfolio Overlap report</h5>
                 <p className="services-carddesc">Detailed MF-Portfolio Overlap Report (Compare up to 10 Funds)</p>
-                <button className="services-btncta" onClick={()=> navigate('/Cardone') }>Read More</button>
+                <button className="services-btncta" onClick={()=> navigate('/Cardone') }>Coming Soon</button>
               </div> */}
 
               <div className="services-card">
@@ -167,7 +167,7 @@ export default function Services() {
                 </div>
                 <h5 className="services-cardtitle">Top Stocks in Funds</h5>
                 <p className="services-carddesc">Fund Managers top-10 favourite Stocks</p>
-                <button className="services-btncta" disabled>Read More</button>
+                <button className="services-btncta" disabled>Coming Soon</button>
               </div>
 
               <div className="services-card">
@@ -176,7 +176,7 @@ export default function Services() {
                 </div>
                 <h5 className="services-cardtitle">Compare Returns Rolling and Historical NAV of Mutual Funds</h5>
                 <p className="services-carddesc">Daily/Weekly/Monthly /Quarterly/Yearly / User Selection</p>
-                <button className="services-btncta" disabled>Read More</button>
+                <button className="services-btncta" disabled>Coming Soon</button>
               </div>
 
               <div className="services-card">
@@ -185,7 +185,7 @@ export default function Services() {
                 </div>
                 <h5 className="services-cardtitle">Top Stocks Sold/Purchased by Funds</h5>
                 <p className="services-carddesc">See in which stocks mutual funds are actively buying and selling</p>
-                <button className="services-btncta" disabled>Read More</button>
+                <button className="services-btncta" disabled>Coming Soon</button>
               </div>
 
               <div className="services-card">
@@ -194,7 +194,7 @@ export default function Services() {
                 </div>
                 <h5 className="services-cardtitle">10-Years/5-Year/3-Years/1-Year/6-Months/3-Months/1-Month/1-Week/1-Day</h5>
                 <p className="services-carddesc">Returns of selected funds</p>
-                <button className="services-btncta" disabled>Read More</button>
+                <button className="services-btncta" disabled>Coming Soon</button>
               </div>
 
               <div className="services-card">
@@ -203,7 +203,7 @@ export default function Services() {
                 </div>
                 <h5 className="services-cardtitle">Stock Holding History in Mutual Funds</h5>
                 <p className="services-carddesc">Detailed Holding history report of stock in Monthly Portfolio</p>
-                <button className="services-btncta" disabled>Read More</button>
+                <button className="services-btncta" disabled>Coming Soon</button>
               </div>
 
               <div className="services-card">
@@ -212,7 +212,7 @@ export default function Services() {
                 </div>
                 <h5 className="services-cardtitle">Equity Research</h5>
                 <p className="services-carddesc">Learn how fundamental and technical analysis needs to be done on stocks</p>
-                <button className="services-btncta" disabled>Read More</button>
+                <button className="services-btncta" disabled>Coming Soon</button>
               </div>
 
               <div className="services-card">
@@ -221,7 +221,7 @@ export default function Services() {
                 </div>
                 <h5 className="services-cardtitle">Financial Planning</h5>
                 <p className="services-carddesc">Get the financial planning done as per your goals, risk profile and financial freedom</p>
-                <button className="services-btncta" disabled>Read More</button>
+                <button className="services-btncta" disabled>Coming Soon</button>
               </div>
 
               <div className="services-card">
@@ -230,7 +230,7 @@ export default function Services() {
                 </div>
                 <h5 className="services-cardtitle">Insurance & Emergency Planning</h5>
                 <p className="services-carddesc">Secure yourself and your family financially in case of any emergency</p>
-                <button className="services-btncta" disabled>Read More</button>
+                <button className="services-btncta" disabled>Coming Soon</button>
               </div>
 
               <div className="services-card">
@@ -239,7 +239,7 @@ export default function Services() {
                 </div>
                 <h5 className="services-cardtitle">Multi-period Returns Overview</h5>
                 <p className="services-carddesc">Top Large/Mid/Small Cap Funds Returns of selected Funds</p>
-                <button className="services-btncta" disabled>Read More</button>
+                <button className="services-btncta" disabled>Coming Soon</button>
               </div>
 
             </div>
