@@ -17,7 +17,8 @@
 
 .navbar-logo {
   height: 48px;
-  width: 48px;
+  width: auto;
+  max-width: 280px;
   object-fit: contain;
   display: block;
 }

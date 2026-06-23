@@ -1,6 +1,6 @@
 import React from "react";
 import { MdLocationOn, MdEmail, MdCall } from "react-icons/md";
-import logo from "../assets/company-logo.png";
+import logo from "../assets/logo.png";
 import fb from "../assets/fb.png";
 import insta from "../assets/insta.png";
 import twi from "../assets/twi.png";
