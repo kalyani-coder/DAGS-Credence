@@ -1,7 +1,10 @@
 import React from 'react';
 import './Disclamer.css'; 
 
-const Disclaimer = () => (
+const Disclaimer = () => {
+  const currentYear = new Date().getFullYear();
+
+  return (
   <div className="disclaimer-container my-3">
     <h1 className="disclaimer-title">Disclaimer</h1>
     <p className="disclaimer-text">
@@ -11,10 +14,11 @@ products offered through the platform. It accepts no liablity for any damages or
 applicable
     </p>
     <p className="disclaimer-copyright">
-      © Copyrights 2024 Credence Investments Technology Services LLP All rights reserved.
+      © Copyrights {currentYear} Credence Investments Technology Services LLP All rights reserved.
       
     </p>
   </div>
-);
+  );
+};
 
 export default Disclaimer;

@@ -49,6 +49,7 @@ export default function Navbar() {
 
   const toggleNav = () => setShowNav(s => !s);
   const isMobile = () => window.innerWidth <= 991;
+  const SHOW_AUTH_BUTTONS_IN_HEADER = false;
 
   return (
     <nav className="navbar navbar-expand-lg main-nav fixed-top">
@@ -244,12 +245,12 @@ export default function Navbar() {
                   </section>
                 )}
               </>
-            ) : (
+            ) : SHOW_AUTH_BUTTONS_IN_HEADER ? (
               <div className="auth-buttons d-flex align-items-center">
                 <button className="btn btn-primary me-3 px-4" disabled>Login</button>
                 <button className="btn navsignup" disabled>Sign Up</button>
               </div>
-            )}
+            ) : null}
           </div>
         </div>
       </div>
