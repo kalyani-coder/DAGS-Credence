@@ -94,6 +94,25 @@
   font-weight: bold;
 }
 
+.send-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.form-message {
+  margin-top: 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+}
+
+.form-message-success {
+  color: #198754;
+}
+
+.form-message-error {
+  color: #dc3545;
+}
+
 .social-icons {
   display: flex;
   justify-content: center;
@@ -106,6 +125,28 @@
   width: 30px;
   height: 30px;
   margin: 0 8px;
+}
+
+.social-icon {
+  width: 30px;
+  height: 30px;
+  margin: 0 8px;
+}
+
+.facebook-icon {
+  color: #1877f2;
+}
+
+.instagram-icon {
+  color: #e1306c;
+}
+
+.twitter-icon {
+  color: #1da1f2;
+}
+
+.youtube-icon {
+  color: #ff0000;
 }
 
 /* .social-icons  {

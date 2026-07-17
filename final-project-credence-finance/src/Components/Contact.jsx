@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import {
   FaMapMarkerAlt,
   FaEnvelope,
@@ -9,15 +9,80 @@ import {
   FaYoutube,
 } from "react-icons/fa";
 import "./Contact.css";
-import fb from "../assets/fb.png";
-import insta from "../assets/insta.png";
-import twi from "../assets/twi.png";
-import youtube from "../assets/youtube.png";
 
 export default function Contact() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+  const [submitState, setSubmitState] = useState({
+    loading: false,
+    success: "",
+    error: "",
+  });
+
    useEffect(()=>{
       window.scrollTo(0, 0)
     },[])
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setFormData((current) => ({
+      ...current,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    setSubmitState({
+      loading: true,
+      success: "",
+      error: "",
+    });
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          message: formData.message,
+        }),
+      });
+
+      const result = await response.json().catch(() => ({}));
+
+      if (!response.ok || result.success === false) {
+        throw new Error(result.message || "Unable to send message right now.");
+      }
+
+      setSubmitState({
+        loading: false,
+        success: "Your message has been sent successfully.",
+        error: "",
+      });
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        message: "",
+      });
+    } catch (error) {
+      setSubmitState({
+        loading: false,
+        success: "",
+        error: error.message || "Something went wrong while sending your message.",
+      });
+    }
+  };
   
   return (
     <section className="contact-section">
@@ -81,29 +146,20 @@ your investment and technology journey.
 
 
             <div className="info-row my-3">
-              <img
-                src="https://cdn-icons-png.flaticon.com/512/1006/1006771.png"
-                className="info-icon"
-                alt="Website"
-              />
-              <span className="info-label">Website:</span>
+              <FaFacebook className="info-icon social-icon facebook-icon" aria-label="Facebook" />
+              <span className="info-label">Facebook:</span>
               <a
                 className="info-link"
-                href="https://www.citspartners.com"
+                href="https://www.facebook.com/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                www.citspartners.com
+                facebook.com
               </a>
             </div>
 
             <div className="info-row">
-              <img
-                src={youtube}
-                className="info-icon"
-                alt="YouTube"
-                 href="https://www.youtube.com/@Credence_Investments"
-              />
+              <FaYoutube className="info-icon social-icon youtube-icon" aria-label="YouTube" />
               <span className="info-label">Youtube:</span>
               {/* <span className="info-text"  >  @Credence_Investments</span> */}
               <span className="info-text"> 
@@ -119,14 +175,46 @@ your investment and technology journey.
               Subscribe to our newsletter and insights on Mutual Funds & Markets
             </p>
 
-            <form className="contact-form">
-              <input type="text" placeholder="Name" />
-              <input type="email" placeholder="Email id" />
-              <input type="text" placeholder="Mobile Number" />
-              <textarea placeholder="Message"></textarea>
-              <button type="submit" className="send-btn">
-                Send
+            <form className="contact-form" onSubmit={handleSubmit}>
+              <input
+                type="text"
+                name="name"
+                placeholder="Name"
+                value={formData.name}
+                onChange={handleChange}
+                required
+              />
+              <input
+                type="email"
+                name="email"
+                placeholder="Email id"
+                value={formData.email}
+                onChange={handleChange}
+                required
+              />
+              <input
+                type="text"
+                name="phone"
+                placeholder="Mobile Number"
+                value={formData.phone}
+                onChange={handleChange}
+              />
+              <textarea
+                name="message"
+                placeholder="Message"
+                value={formData.message}
+                onChange={handleChange}
+                required
+              ></textarea>
+              <button type="submit" className="send-btn" disabled={submitState.loading}>
+                {submitState.loading ? "Sending..." : "Send"}
               </button>
+              {submitState.success ? (
+                <p className="form-message form-message-success">{submitState.success}</p>
+              ) : null}
+              {submitState.error ? (
+                <p className="form-message form-message-error">{submitState.error}</p>
+              ) : null}
             </form>
 
             {/* <div className="social-icons">
@@ -137,17 +225,11 @@ your investment and technology journey.
           
             </div> */}
             <div className="social-icons">
-              <a href="#" target="_blank" rel="noopener noreferrer">
-                <img src={fb} className="img-fluid social" alt="Facebook" />
-              </a>
-              <a href="#" target="_blank" rel="noopener noreferrer">
-                <img src={insta} className="img-fluid social" alt="Instagram" />
-              </a>
-              <a href="#" target="_blank" rel="noopener noreferrer">
-                <img src={twi} className="img-fluid social" alt="Twitter" />
-              </a>
+              <FaFacebook className="social-icon social facebook-icon" aria-label="Facebook" />
+              <FaInstagram className="social-icon social instagram-icon" aria-label="Instagram" />
+              <FaTwitter className="social-icon social twitter-icon" aria-label="Twitter" />
               <a href="https://www.youtube.com/@Credence_Investments" target="_blank" rel="noopener noreferrer">
-                <img src={youtube} className="img-fluid social" alt="YouTube" />
+                <FaYoutube className="social-icon social youtube-icon" aria-label="YouTube" />
               </a>
             </div>
           </div>
