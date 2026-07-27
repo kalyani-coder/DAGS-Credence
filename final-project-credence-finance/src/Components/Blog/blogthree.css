@@ -1,0 +1,40 @@
+.bpagethree-container {
+  max-width: 860px;
+  margin: 32px auto 32px auto;
+  padding: 0 16px;
+  background: #fff;
+}
+
+.bpagethree-block {
+  padding: 32px 22px 28px 22px;
+  border-radius: 8px;
+  /* box-shadow: 0 2px 12px rgba(60, 80, 110, 0.07); */
+  font-size: 1.13rem;
+  line-height: 1.8;
+  color: #181818;
+  background: #fff;
+}
+
+.bpagethree-block b {
+  font-weight: bold;
+}
+
+.bpagethree-orderlist {
+  margin: 18px 0 22px 32px;
+  padding-left: 0;
+}
+
+.bpagethree-orderlist li {
+  margin-bottom: 8px;
+}
+
+.bpagethree-bulletlist {
+  margin: 12px 0 18px 28px;
+  padding-left: 0;
+  list-style-type: disc;
+}
+
+.bpagethree-bulletlist li {
+  margin-bottom: 7px;
+  font-size: 1.11rem;
+}

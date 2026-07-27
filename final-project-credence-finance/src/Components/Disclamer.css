@@ -1,0 +1,58 @@
+.disclaimer-container {
+  background: #04275a;
+  color: #fff;
+  padding: 40px 20px 20px 20px;
+  font-family: 'Arial', sans-serif;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.disclaimer-title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 28px;
+}
+
+.disclaimer-content-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 30px;
+  max-width: 1400px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.disclaimer-text {
+  flex: 1 1 60%;
+  text-align: left;
+  margin-bottom: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: normal;
+  color: #c2d7fa;
+  min-width: 220px;
+}
+
+.disclaimer-copyright {
+  flex: 1 1 33%;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1rem;
+  color: #c2d7fa;
+  min-width: 200px;
+}
+
+@media (max-width: 850px) {
+  .disclaimer-content-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+  }
+  .disclaimer-text,
+  .disclaimer-copyright {
+    text-align: start;
+    font-size: 16px;
+  }
+}

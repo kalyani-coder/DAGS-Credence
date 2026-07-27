@@ -1,0 +1,40 @@
+.blogone-container {
+  max-width: 900px;
+  margin: 28px auto 16px auto;
+  padding: 0 16px;
+}
+
+.blogone-image {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+}
+
+.finlit-block {
+  background: #fff;
+  border-radius: 6px;
+  max-width: 900px;
+  margin: 28px auto 0 auto;
+  padding: 22px 18px 12px 24px;
+  /* box-shadow: 0 2px 12px rgba(40, 80, 120, 0.10); */
+  font-size: 1.07rem;
+  color: #202020;
+  line-height: 1.7;
+}
+
+.finlit-block b {
+  font-weight: bold;
+}
+
+.finlit-block ol {
+  margin: 16px 0 16px 25px;
+  padding-left: 0;
+}
+
+.finlit-block li {
+  margin-bottom: 11px;
+  font-size: 1.03rem;
+  line-height: 1.6;
+}

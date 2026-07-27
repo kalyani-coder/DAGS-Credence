@@ -1,0 +1,381 @@
+/* ===========================
+   Global Styles
+=========================== */
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+/* ===========================
+   Fullscreen Carousel
+=========================== */
+.carousel-wrapper {
+  position: relative;
+  padding: 30px 0px;
+}
+
+.carousel,
+.carousel-inner,
+.carousel-item,
+.slide-section {
+  min-height: 85vh;
+  height: auto;
+}
+
+.carousel-item img {
+  max-height: 70vh;
+  object-fit: contain;
+  width: 100%;
+}
+
+.slide-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* min-height: calc(100vh - 80px); */
+  padding: 100px 0 50px;
+}
+/* Stronger selector: target only carousel indicators inside #carouselExampleDark */
+
+#carouselExampleDark .carousel-indicators {
+  position: absolute;
+  bottom: 20px;
+  left: 35%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  list-style: none;
+  border-radius: 30px;
+  backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.3);
+  padding: 6px 14px;
+  z-index: 15;
+}
+
+#carouselExampleDark .carousel-indicators [data-bs-target] {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #ccc;
+  opacity: 0.7;
+  border: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+#carouselExampleDark .carousel-indicators [data-bs-target]:hover {
+  opacity: 0.9;
+  transform: scale(1.2);
+}
+
+#carouselExampleDark .carousel-indicators .active {
+  background-color: #0066cc;
+  opacity: 1;
+  transform: scale(1.4);
+  box-shadow: 0 0 12px rgba(0, 102, 204, 0.5);
+}
+
+@media (max-width: 576px) {
+}
+
+/* ===========================
+   Mobile Responsive Carousel
+=========================== */
+@media (max-width: 768px) {
+  .carousel,
+  .carousel-inner,
+  .carousel-item,
+  .slide-section {
+    height: auto;
+    min-height: auto;
+  }
+
+  .slide-section {
+    min-height: calc(100vh - 70px);
+    padding: 80px 0 40px;
+  }
+
+  .carousel-item img {
+    max-height: 50vh;
+    margin-top: 20px;
+  }
+
+  .carousel-indicators {
+    bottom: 15px;
+    padding: 6px 10px;
+  }
+
+  .carousel-indicators [data-bs-target] {
+    width: 10px;
+    height: 10px;
+    margin: 0 4px;
+  }
+}
+
+@media (max-width: 576px) {
+  #carouselExampleDark .carousel-indicators {
+    bottom: 4px;
+  }
+
+  .slide-section {
+    padding: 0px 0 30px;
+    min-height: calc(100vh - 60px);
+  }
+
+  .carousel-item img {
+    max-height: 29vh;
+  }
+
+  .carousel-indicators {
+    bottom: 30px;
+    padding: 4px 8px;
+  }
+
+  .carousel-indicators [data-bs-target] {
+    width: 8px;
+    height: 8px;
+    margin: 0 3px;
+  }
+}
+
+/* ===========================
+   Slide Text
+=========================== */
+.head1 {
+  font-size: 4rem;
+  color: #0066cc;
+  line-height: 70px;
+  font-weight: 900 !important;
+}
+
+.funds {
+  color: #ff9933;
+  font-weight: 900;
+}
+
+.btn1 {
+  background-color: #0066cc !important;
+  padding: 12px 24px;
+  color: white !important;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  margin-top: 20px;
+}
+
+.hed {
+  color: #ffa739;
+  font-weight: 900 !important;
+}
+
+.lead {
+  text-align: start;
+}
+
+/* Responsive Typography */
+@media (max-width: 992px) {
+  .head1 {
+    font-size: 3rem;
+    line-height: 55px;
+  }
+}
+
+@media (max-width: 768px) {
+  .head1 {
+    font-size: 2.5rem;
+    line-height: 45px;
+  }
+
+  .hed {
+    font-size: 0.9rem;
+  }
+
+  .leads {
+    font-size: 16px !important;
+    text-align: start;
+  }
+
+  .btn1 {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .head1 {
+    font-size: 2rem;
+    line-height: 35px;
+  }
+
+  .hed {
+    font-size: 0.8rem;
+  }
+
+  .hed .leads {
+    font-size: 16px !important;
+  }
+}
+
+/* ===========================
+   Card Section Responsive
+=========================== */
+/* =======================
+   General Container Styles
+========================*/
+
+.credence-stats-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-left: -15px;
+  margin-right: -15px;
+  margin-top: 30px;
+}
+
+.credence-stat-col {
+  padding-left: 15px;
+  padding-right: 15px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  flex: 1 1 22%;
+  max-width: 22%;
+  margin-bottom: 2rem;
+}
+
+.credence-stat-number {
+  color: #0066cc;
+}
+.credence-stat-subtitle {
+  display: block; /* <-- now vertical margin works */
+  margin: 10px 0 !important;
+  color: #f6a623;
+}
+
+.credence-stat-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  border: 2px solid #0066cc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  /* Uniform sizing for ALL cards */
+  flex: 1 1 260px;
+  min-width: 220px;
+  max-width: 260px;
+  min-height: 230px; /* Set min-height so all cards are always same height */
+  height: 100%;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  cursor: default;
+}
+
+.credence-stat-card:hover {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+}
+
+.credence-stat-icon img{
+  width: 80px;
+  height: 80px;
+  color: #0066cc;
+}
+
+
+
+@media (max-width: 991px) {
+  .credence-stat-col {
+    flex: 1 1 45%;
+    max-width: 48%;
+    margin-bottom: 1.5rem;
+  }
+  .credence-stat-card {
+    min-width: 180px;
+    max-width: 220px;
+    min-height: 210px;
+  }
+}
+
+@media (max-width: 575px) {
+  .credence-stats-row {
+    gap: 1rem;
+  }
+  .credence-stat-col {
+    flex: 1 1 100%;
+    max-width: 100%;
+    margin-bottom: 1rem;
+  }
+  .credence-stat-card {
+    min-width: 90%;
+    max-width: 99%;
+    min-height: 170px;
+    padding: 15px;
+  }
+}
+
+/* =======================
+   Blog Card Styles (Optional)
+========================*/
+.blogCrad {
+  background-color: #eaeaea;
+}
+
+.card-img-top {
+  background-color: #f8f9fa;
+}
+
+.card {
+  border: none !important;
+  box-shadow: none !important;
+  width: 100% !important;
+  border-radius: 0 !important;
+}
+
+/* about text  */
+
+.credence-about-text {
+  /* font-family: 'Inter', sans-serif; */
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #333333;
+  margin-bottom: 1.5rem;
+  white-space: pre-line; /* to preserve line breaks */
+}
+
+.credence-about-section {
+  display: block;
+  margin-top: 1.25rem;
+  color: #2a3f5f;
+  font-weight: 500;
+}
+
+/* Optional: add slight indent on spans, if preferred */
+.credence-about-section:not(:first-child) {
+  padding-left: 12px;
+}
+
+/* Responsive font scaling */
+@media (max-width: 768px) {
+  .credence-about-text {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  .credence-about-section {
+    padding-left: 8px;
+  }
+}
+
+/* about text end  */
+
+
+.credence-icon {
+  fill: #0066cc; /* changes the color of the icon */
+  width: 80px;
+  height: 80px;
+}

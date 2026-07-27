@@ -1,0 +1,89 @@
+.commission-wrapper {
+  /* max-width: 800px; */
+  margin: 40px auto;
+  padding: 55px;
+  background: #fff;
+  border-radius: 10px;
+  /* box-shadow: 0 2px 10px rgba(0,0,0,0.06); */
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+/* 
+#ids {
+  font-size: 2em;
+  margin-bottom: 16px;
+  font-weight: 900 !important;
+} */
+
+.commission-wrapper #ids {
+  font-weight: 900 !important;
+}
+
+.description {
+  font-size: 16px;
+
+  margin-bottom: 28px;
+}
+
+.commission-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 28px;
+}
+
+.commission-table th {
+  background: #17a388;
+  color: #fff;
+  font-weight: 600;
+  padding: 10px 8px;
+  text-align: left;
+  border: 1px solid #dadada;
+  font-size: 16px;
+}
+
+.commission-table td {
+  padding: 10px 8px;
+  border: 1px solid #dadada;
+  background: #f8f9fa;
+  font-size: 1em;
+}
+
+.commission-table tbody tr:nth-child(odd) td {
+  background: #e7f6f3;
+}
+
+.notes {
+  font-size: 0.98em;
+  color: #333;
+  line-height: 1.65;
+}
+
+.notes b {
+  font-weight: 700;
+}
+
+@media (max-width: 600px) {
+  .commission-wrapper {
+    padding: 16px;
+    margin: 20px auto;
+  }
+
+  .description {
+    font-size: 1em;
+    margin-bottom: 20px;
+  }
+
+  .commission-table th,
+  .commission-table td {
+    font-size: 0.9em;
+    padding: 8px 6px;
+  }
+
+  .table-responsive {
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  .commission-table {
+    width: 700px; /* Allow horizontal scrolling on small screens */
+  }
+}
