@@ -1,0 +1,299 @@
+/* ML Training Page Styles */
+.ml-training-page {
+  font-family: 'Arial', sans-serif;
+}
+
+/* Hero Section */
+.hero-section {
+  min-height: 88vh;
+  display: flex;
+  align-items: center;
+  padding: 100px 0 50px;
+  /* background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); */
+  background-color: #fff;
+}
+
+/* Python Hero Background Styles */
+.python-hero-bg {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Ensure no background conflicts */
+.python-training .python-hero-bg {
+  background-image: inherit !important;
+}
+
+.hero-overlay {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(0.5px);
+  display: flex;
+  align-items: center;
+}
+
+/* Remove any potential background from container */
+.python-training .hero-overlay .container {
+  background: none;
+  position: relative;
+  z-index: 2;
+}
+
+/* Python-specific styles for background image layout */
+.python-training .hero-section {
+  overflow: hidden;
+  background: none !important;
+  padding: 0;
+}
+
+.python-training .ml-title {
+  margin-bottom: 24px;
+  color: #0066cc;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.9);
+  font-weight: 900;
+}
+
+.python-training .lead {
+  max-width: 640px;
+  margin: 0 auto;
+  color: #333;
+  text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.python-training .hed {
+  color: #ff6b35;
+  text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.9);
+  font-weight: 900 !important;
+}
+
+.ml-title {
+  font-size: 4rem;
+  color: #0066cc;
+  line-height: 70px;
+  font-weight: 900 !important;
+  margin-bottom: 20px;
+}
+
+.hero-image { max-height: 85vh; object-fit: contain; width: 120%; }
+
+/* Stages Section */
+.stages-section { padding: 40px 0 80px; background: #fff; }
+
+/* Exact UI: Blue chip style with white dot */
+.stage-block { margin: 28px 0 40px; }
+.stage-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: #0d5ddf;
+  color: #fff;
+  font-weight: 700;
+  padding: 12px 20px;
+  border-radius: 4px;
+  font-size: 17px;
+}
+.stage-chip::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  background: #fff;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* Bullets exactly like the mock */
+.stage-bullets { list-style: none; padding: 0; margin: 16px 0 0 0; }
+.stage-bullets li { position: relative; padding-left: 28px; margin: 5px 0; }
+.stage-bullets li::before {
+  content: '◦';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #333;
+  font-size: 26px;
+  line-height: 1;
+}
+.stage-bullets span { font-size: 20px; font-weight: normal; color: #333; }
+
+/* Responsive tweaks to maintain proportions */
+@media (max-width: 1200px) {
+  .python-hero-bg {
+    background-size: cover;
+    background-attachment: scroll;
+  }
+}
+@media (max-width: 992px) {
+  .ml-title { font-size: 3rem; line-height: 55px; }
+  .stage-bullets span { font-size: 18px; }
+  .hero-image { max-height: 65vh; width: 100%; }
+  .python-hero-bg {
+    background-size: cover;
+    background-attachment: scroll;
+    background-position: center center;
+  }
+  .hero-overlay {
+    background: rgba(255, 255, 255, 0.75);
+  }
+}
+@media (max-width: 768px) {
+  .ml-title { font-size: 2.5rem; line-height: 45px; text-align: center; }
+  .hero-section { padding: 80px 0 40px; text-align: center; }
+  .stage-chip { padding: 10px 16px; }
+  .stage-bullets span { font-size: 16px; }
+  .hero-image { max-height: 50vh; width: 100%; }
+  .python-hero-bg {
+    background-attachment: scroll;
+    background-size: cover;
+    background-position: center center;
+  }
+
+  .hero-overlay {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: none;
+  }
+}
+@media (max-width: 576px) {
+  .ml-title { font-size: 2rem; line-height: 35px; }
+  .stage-bullets span { font-size: 15px; }
+  .hero-image { max-height: 40vh; width: 100%; }
+  .python-hero-bg {
+    background-attachment: scroll;
+    background-size: cover;
+    background-position: center center;
+  }
+  .hero-overlay {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: none;
+  }
+
+.btn1{
+  margin-bottom: 9px;
+}
+
+.python-training .hed {
+  margin-top: 35px;
+  /* color: #ff6b35;
+  text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.9);
+  font-weight: 900 !important; */
+}
+
+}
+
+/* .list{
+  font-weight: normal;
+} */
+
+.enroll-container {
+  min-height: 19vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;   /* Vertical centering */
+  align-items: center;       /* Horizontal centering */
+  background: #fff;
+  gap: 25px;
+}
+
+.enroll-details {
+  display: flex;
+  gap: 25px;
+  margin-bottom: 15px;
+}
+
+.enroll-label {
+  background: #ffa638;
+  color: #222;
+  font-weight: bold;
+  font-size: 30pxrem;
+  padding: 4px 18px;
+  border-radius: 4px;
+}
+
+.enroll-btn {
+  background: #08aa47;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  padding: 0px 27px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+  transition: background 0.2s;
+}
+
+.enroll-btn:hover {
+  background: #068039;
+}
+
+
+
+
+.python-training-wrapper {
+  width: 100%;
+}
+
+.python-hero-section {
+  width: 100%;
+  min-height: 420px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.python-hero-overlay {
+  /* background: rgba(8, 44, 105, 0.65);  */
+  min-height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.python-hero-content {
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  padding: 52px 20px 40px 20px;
+}
+
+.python-hero-advisory {
+  color: #fff;
+  font-size: 1.2rem;
+  letter-spacing: 0.5px;
+  margin-bottom: 14px;
+  font-weight: 500;
+}
+
+.python-hero-title {
+  color: #2577de;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+
+.python-hero-span {
+  color: #ffa638;
+  font-size: 2.4rem;
+  font-weight: bold;
+}
+
+.python-hero-desc {
+  color: #0b0b0b;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-top: 16px;
+}
