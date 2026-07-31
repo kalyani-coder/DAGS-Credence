@@ -40,3 +40,24 @@ npm run dev
 
 - Contact form submits to `/api/contact` and sends mail to `info@citspartners.com`.
 - In development, Vite proxies `/api/*` requests to `http://localhost:5001`.
+
+## Deploy on Render (Web Service)
+
+Use **one** Web Service so the site and `/api` share the same URL.
+
+| Setting | Value |
+|--------|--------|
+| Root Directory | `final-project-credence-finance` |
+| Build Command | `npm install --include=dev && npm run build` |
+| Start Command | `npm start` |
+
+Environment variables (Dashboard → Environment):
+
+- `CONTACT_TO`
+- `SMTP_HOST`
+- `SMTP_PORT`
+- `SMTP_USER`
+- `SMTP_PASS`
+- `SMTP_FROM`
+
+`PORT` is set by Render automatically. After deploy, open the Render URL and test Contact Us (same origin `/api/contact`).

@@ -22,7 +22,19 @@ const CONTACT_TO = env("CONTACT_TO") || env("SMTP_FROM") || env("SMTP_USER");
 app.use(cors());
 app.use(express.json());
 
-const createTransporter = () => {
+const resolveSmtpHost = async (hostname) => {
+  try {
+    const addresses = await dns.promises.resolve4(hostname);
+    if (addresses?.[0]) return addresses[0];
+  } catch {
+    // Fall through to system lookup.
+  }
+
+  const result = await dns.promises.lookup(hostname, { family: 4 });
+  return result.address;
+};
+
+const createTransporter = async () => {
   const SMTP_HOST = env("SMTP_HOST");
   const SMTP_PORT = env("SMTP_PORT");
   const SMTP_USER = env("SMTP_USER");
@@ -33,13 +45,20 @@ const createTransporter = () => {
   }
 
   const port = Number(SMTP_PORT);
+  const resolvedHost = await resolveSmtpHost(SMTP_HOST);
 
   return nodemailer.createTransport({
-    host: SMTP_HOST,
+    host: resolvedHost,
     port,
     secure: port === 465,
     requireTLS: port === 587,
+    name: SMTP_HOST,
     family: 4,
+    tls: {
+      servername: SMTP_HOST,
+    },
+    connectionTimeout: 20000,
+    greetingTimeout: 20000,
     auth: {
       user: SMTP_USER,
       pass: SMTP_PASS,
@@ -62,7 +81,7 @@ app.post("/api/contact", async (req, res) => {
       throw new Error("CONTACT_TO is not configured.");
     }
 
-    const transporter = createTransporter();
+    const transporter = await createTransporter();
     const fromAddress = env("SMTP_FROM") || env("SMTP_USER");
 
     await transporter.sendMail({
@@ -105,7 +124,7 @@ app.post("/api/newsletter", async (req, res) => {
       throw new Error("CONTACT_TO is not configured.");
     }
 
-    const transporter = createTransporter();
+    const transporter = await createTransporter();
     const fromAddress = env("SMTP_FROM") || env("SMTP_USER");
 
     await transporter.sendMail({
@@ -132,6 +151,18 @@ app.post("/api/newsletter", async (req, res) => {
   }
 });
 
+// Production (Render): serve the Vite build so /api and the site share one origin.
+const distPath = path.join(__dirname, "..", "dist");
+app.use(express.static(distPath));
+app.get("*", (req, res, next) => {
+  if (req.path.startsWith("/api")) {
+    return next();
+  }
+  res.sendFile(path.join(distPath, "index.html"), (err) => {
+    if (err) next();
+  });
+});
+
 app.listen(PORT, () => {
-  console.log(`Contact API running on http://localhost:${PORT}`);
+  console.log(`App running on http://localhost:${PORT}`);
 });

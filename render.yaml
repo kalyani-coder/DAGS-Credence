@@ -1,0 +1,28 @@
+# Render Blueprint — one Web Service for frontend + contact API
+# Manual setup (New → Web Service):
+#   Root Directory: final-project-credence-finance
+#   Build Command:  npm install --include=dev && npm run build
+#   Start Command:  npm start
+
+services:
+  - type: web
+    name: dags-credence
+    runtime: node
+    rootDir: final-project-credence-finance
+    buildCommand: npm install --include=dev && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_VERSION
+        value: "20"
+      - key: CONTACT_TO
+        sync: false
+      - key: SMTP_HOST
+        sync: false
+      - key: SMTP_PORT
+        sync: false
+      - key: SMTP_USER
+        sync: false
+      - key: SMTP_PASS
+        sync: false
+      - key: SMTP_FROM
+        sync: false

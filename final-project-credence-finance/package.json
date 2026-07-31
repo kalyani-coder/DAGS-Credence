@@ -6,10 +6,15 @@
   "scripts": {
     "dev": "node ./node_modules/vite/bin/vite.js",
     "server": "node ./server/server.js",
+    "start": "node ./server/server.js",
     "build": "node ./node_modules/vite/bin/vite.js build",
     "lint": "eslint .",
     "preview": "node ./node_modules/vite/bin/vite.js preview"
   },
+  "engines": {
+    "node": ">=18"
+  },
+
   "dependencies": {
     "@reduxjs/toolkit": "^2.8.2",
     "bootstrap": "^5.3.7",
