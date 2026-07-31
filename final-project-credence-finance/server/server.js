@@ -1,4 +1,5 @@
 import cors from "cors";
+import dns from "dns";
 import dotenv from "dotenv";
 import express from "express";
 import nodemailer from "nodemailer";
@@ -7,6 +8,10 @@ import { fileURLToPath } from "url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 dotenv.config({ path: path.join(__dirname, "..", ".env") });
+
+// ISP/system DNS on this network often fails; use public resolvers + IPv4.
+dns.setServers(["8.8.8.8", "1.1.1.1"]);
+dns.setDefaultResultOrder("ipv4first");
 
 const env = (key) => process.env[key]?.trim() || "";
 
@@ -34,6 +39,7 @@ const createTransporter = () => {
     port,
     secure: port === 465,
     requireTLS: port === 587,
+    family: 4,
     auth: {
       user: SMTP_USER,
       pass: SMTP_PASS,
